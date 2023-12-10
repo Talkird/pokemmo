@@ -3,7 +3,7 @@ from PIL import Image
 
 class TabView(ctk.CTkTabview):
     def __init__(self, master):
-        super().__init__(master, corner_radius=12)
+        super().__init__(master, corner_radius=10)
 
         #create tabs
         self.add("Payday")
