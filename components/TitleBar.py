@@ -4,13 +4,13 @@ def close_menu() -> None:
     exit(-1)
 
 class TitleBar(ctk.CTkFrame):
-    def __init__(self, master):
+    def __init__(self, master, title: str):
         super().__init__(master, corner_radius=0)
 
-        self.title_label = ctk.CTkLabel(master=self, text="PokeMMO Menu", font=("Tahoma", 16))
+        self.title_label = ctk.CTkLabel(master=self, text=title, font=("Roboto", 16))
         self.title_label.pack(anchor="n", side="left", padx=(150, 0))
 
-        self.close_button = ctk.CTkButton(master=self, text="X", font=("Tahoma", 16), corner_radius=0, width=50, command=close_menu)
+        self.close_button = ctk.CTkButton(master=self, text="X", font=("Roboto", 16), corner_radius=0, width=50, command=close_menu)
         self.close_button.pack(anchor="ne", side="right")
 
         self.pack(fill="x", anchor="n")

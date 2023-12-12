@@ -14,11 +14,9 @@ class App(ctk.CTk):
         self.attributes('-alpha', 0.95)
 
         # widgets
-        self.title_bar = TitleBar(master=self)
-
+        self.title_bar = TitleBar(master=self, title="PokeMMO Menu")
         self.tab_view = TabView(master=self)
         self.tab_view.pack(fill="both", expand=True, padx=15, pady=(0,15))
-
 
 ctk.set_default_color_theme("green")
 app = App()
